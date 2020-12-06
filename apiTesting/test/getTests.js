@@ -3,12 +3,6 @@ const { getAll, getById } = require('../userService/get');
 
 describe('User Api Tests', () => {
   describe('Get endpoint testing', () => {
-    it("Should return 2 users", done => {
-      getAll().then(result => {
-        expect(result.length).to.eq(2);
-        done();
-      });
-    });
 
     it("Should return a user using the firstName filter", done => {
       getAll({ firstName: "Tim" }).then(result => {
